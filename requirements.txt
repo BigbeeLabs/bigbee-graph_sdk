@@ -1,0 +1,6 @@
+-e ../bigbee-remote_models
+pytest
+alembic
+psycopg2-binary
+python-dotenv
+pyyaml
