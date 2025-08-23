@@ -1,4 +1,4 @@
-# tests/domain/people/test_people_all.py
+# graph_sdk/tests/domain/person/test_people_fetch_when_one_person.py
 
 import uuid
 from graph_sdk.domain.person.person import Person

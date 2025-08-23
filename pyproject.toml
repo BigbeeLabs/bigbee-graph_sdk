@@ -1,17 +1,18 @@
-[project]
+[tool.poetry]
 name = "bigbee-graph-sdk"
 version = "0.1.0"
 description = "SDK for interacting with bigbee-graph"
-authors = [{ name = "Your Name", email = "your@email.com" }]
+authors = ["Joseph Villa <joseph@bigbeelabs.com>"]
 readme = "README.md"
-requires-python = ">=3.10"
+packages = [{ include = "graph_sdk" }]
 
-dependencies = [
-    "alembic",
-    "sqlalchemy",
-    { path = "../bigbee-remote_models", develop = true }
-]
+[tool.poetry.dependencies]
+python = "^3.12"
+alembic = "*"
+sqlalchemy = "*"
+bigbee-acts-as-having = { path = "../bigbee-acts_as_having", develop = true }
+bigbee-remote_models = { path = "../bigbee-remote_models", develop = true }
 
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

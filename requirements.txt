@@ -1,4 +1,6 @@
 -e ../bigbee-remote_models
+-e ../bigbee-app_collaborators
+-e ../bigbee-http_actions
 pytest
 alembic
 psycopg2-binary
