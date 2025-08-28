@@ -7,12 +7,15 @@ readme = "README.md"
 packages = [{ include = "graph_sdk" }]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12,<4.0"
 alembic = "*"
 sqlalchemy = "*"
 bigbee-acts-as-having = { path = "../bigbee-acts_as_having", develop = true }
-bigbee-remote_models = { path = "../bigbee-remote_models", develop = true }
+bigbee-remote-models = { path = "../bigbee-remote_models", develop = true }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
